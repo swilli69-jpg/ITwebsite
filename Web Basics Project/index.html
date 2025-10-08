@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'Courier Prime', monospace;
+  font-size: 16px;
+  background: #ffb5af;
+  color: #000000;
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: transparent;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav {
+  background: #d9cafe;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer {
+  background: transparent;
+  padding: 1em;
+  text-align: center;
+  font-size: 14px;
+}
+
+.layout {
+  display: flex;
+  gap: 1em;
+  box-sizing: border-box;
+  justify-content: center;
+  max-width: 100%;
+}
+
+aside, main {
+  padding: 16px;
+  border: 0px solid #ccc;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.left  { flex: 0 0 20%; background: #d9cafe; }
+.main  { flex: 0 0 60%; background: #d9cafe; }
+.right { flex: 0 0 20%; background: #d9cafe; }
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .left, .main, .right {
+    flex: 1 1 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    Stephanie's Pure Data Page
+  </header>
+  <nav>
+    <a href="#">Home</a> | <a href="#about">About</a> | <a href="#gallery">Gallery</a> 
+  </nav>
+  <div class="content-wrap">
+    <div class="layout">
+      <aside class="left">
+        <h3>Quick Info</h3>
+        <ul>
+          <li>Created by Miller Puckette</li>
+          <li>Open-source software</li>
+          <li>Cross-platform: Windows, macOS, Linux</li>
+          <li>Used for: Audio, Video, and Multimedia Art</li>
+        </ul>
+      </aside>
+      <main class="main">
+        <h2>What is Pure Data?</h2>
+        <p>Pure Data (Pd) is an open-source visual programming language designed for creating interactive computer music, sound design, and multimedia projects. Instead of writing lines of code, users connect objects with patch cords in a graphical interface to process and generate sound, MIDI, and visual data in real-time.</p>
+
+        <h3>How it Works</h3>
+        <p>Pd uses a <strong>dataflow</strong> model, meaning that data — such as control messages, audio signals, or numerical values — flows between interconnected objects. Each object performs a specific function, such as generating a tone, filtering sound, or controlling playback.</p>
+
+        <pre>
+[osc~ 440]
+|
+[*~ 0.2]
+|
+[dac~]
+        </pre>
+        <p>This example creates a 440 Hz sine tone, multiplies it by 0.2 (reducing amplitude), and sends it to your audio output.</p>
+
+        <h3>Why Use Pd?</h3>
+        <ul>
+          <li><strong>Real-time Audio Processing</strong> – Build and perform interactive sound systems live.</li>
+          <li><strong>Extensible</strong> – Hundreds of libraries extend Pd for visuals, sensors, and more.</li>
+          <li><strong>Educational</strong> – Great for learning digital signal processing and computer music.</li>
+        </ul>
+
+        <h3 id="about">Learn More</h3>
+        <p>Visit the official Pure Data community website at <a href="https://puredata.info" target="_blank">puredata.info</a> for downloads, documentation, and community discussions.</p>
+      </main>
+      <aside class="right">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="https://puredata.info/downloads">Download Pd</a></li>
+          <li><a href="https://github.com/pure-data">GitHub Repository</a></li>
+          <li><a href="https://forum.pdpatchrepo.info/">User Forum</a></li>
+          <li><a href="https://www.youtube.com/results?search_query=pure+data+tutorials">Video Tutorials</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    © 2025 Stephanie Williams — A site dedicated to Pure Data and sound exploration.
+  </footer>
+</body>
+</html>

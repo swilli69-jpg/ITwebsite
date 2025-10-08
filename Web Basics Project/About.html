@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'Courier Prime', monospace;
+  font-size: 16px;
+  background: #ffb5af;
+  color: #000000;
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: transparent;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav {
+  background: #d9cafe;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer {
+  background: transparent;
+  padding: 1em;
+  text-align: center;
+  font-size: 14px;
+}
+
+.layout {
+  display: flex;
+  gap: 1em;
+  box-sizing: border-box;
+  justify-content: center;
+  max-width: 100%;
+}
+
+aside, main {
+  padding: 16px;
+  border: 0px solid #ccc;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.left  { flex: 0 0 20%; background: #d9cafe; }
+.main  { flex: 0 0 60%; background: #d9cafe; }
+.right { flex: 0 0 20%; background: #d9cafe; }
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .left, .main, .right {
+    flex: 1 1 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    Stephanie's Pure Data Page
+  </header>
+  <nav>
+    <a href="index.html">Home</a> | <a href="#about">About</a> | <a href="#gallery">Gallery</a> 
+  </nav>
+  <div class="content-wrap">
+    <div class="layout">
+      <aside class="left">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: stephanie@example.com</li>
+          <li>Location: San Francisco, CA</li>
+          <li>Active since: 2018</li>
+        </ul>
+      </aside>
+      <main class="main">
+        <h2 id="about">About Stephanie</h2>
+        <p>Hi, I'm Stephanie Williams! I'm a sound artist, experimental musician, and creative technologist based in San Francisco. I discovered Pure Data in 2018 while studying electronic music composition, and it completely transformed how I think about sound and interactivity.</p>
+
+        <h3>My Journey with Pure Data</h3>
+        <p>What started as a curiosity about digital signal processing has evolved into a full-blown passion. I use Pd to create generative soundscapes, interactive installations, and live performance tools. The visual patching environment makes complex audio processing feel intuitive and playful.</p>
+
+        <p>Over the years, I've built everything from granular synthesizers to algorithmic composition systems. I love how Pd encourages experimentation and lets you see the flow of data in real-time.</p>
+
+        <h3>Why I Made This Site</h3>
+        <p>This website is my small contribution to the Pure Data community. I wanted to create a space where beginners could learn about Pd without feeling overwhelmed, and where I could share patches, tutorials, and resources that I've found helpful along the way.</p>
+
+        <p>Whether you're a composer, sound designer, educator, or just curious about computer music, I hope you'll find something here that inspires you to dive deeper into the world of Pure Data.</p>
+
+        <h3>Beyond Pure Data</h3>
+        <p>When I'm not patching, you can find me exploring modular synthesis, field recording in urban environments, or collaborating with visual artists on multimedia projects. I'm always excited to connect with other creative technologists and sound enthusiasts.</p>
+
+        <p>Feel free to reach out if you'd like to collaborate, share ideas, or just chat about all things audio!</p>
+      </main>
+      <aside class="right">
+        <h3>Skills</h3>
+        <ul>
+          <li>Pure Data patching</li>
+          <li>Sound design</li>
+          <li>Live performance</li>
+          <li>Max/MSP</li>
+          <li>SuperCollider</li>
+          <li>Audio programming</li>
+        </ul>
+        <h3>Projects</h3>
+        <ul>
+          <li>Generative ambient systems</li>
+          <li>Interactive installations</li>
+          <li>Live coding performances</li>
+          <li>Patch tutorials</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    © 2025 Stephanie Williams — A site dedicated to Pure Data and sound exploration.
+  </footer>
+</body>
+</html>
